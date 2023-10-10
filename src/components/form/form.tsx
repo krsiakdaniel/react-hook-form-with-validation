@@ -56,6 +56,8 @@ const Form = () => {
     })
   }
 
+  const hasErrors = Boolean(errors.name || errors.phone || errors.email)
+
   return (
     <StyledForm>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -115,7 +117,7 @@ const Form = () => {
             render={({ field }) => <Select className="input-field" {...field} options={languages} />}
           />
 
-          <Button type="submit" className="submit" variant="contained" size="large">
+          <Button type="submit" className="submit" variant="contained" size="large" disabled={hasErrors}>
             Submit
           </Button>
 
