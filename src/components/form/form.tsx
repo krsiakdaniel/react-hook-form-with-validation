@@ -31,7 +31,6 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
     control,
-    reset,
   } = useForm<FormValues>({
     defaultValues: {
       name: '',
@@ -49,14 +48,11 @@ const Form = () => {
 
   const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
     setData(data)
-
-    reset({
-      name: '',
-      language: [],
-    })
   }
 
   const hasErrors = Boolean(errors.name || errors.phone || errors.email)
+  const showData = data.email !== '' && data.name !== '' && data.phone !== ''
+  const formData = JSON.stringify(data)
 
   return (
     <StyledForm>
@@ -64,7 +60,7 @@ const Form = () => {
         <Box className="form-container">
           <TextField
             className="input-field"
-            label="name"
+            label="Jméno *"
             {...register('name', {
               minLength: {
                 value: 3,
@@ -80,7 +76,7 @@ const Form = () => {
 
           <TextField
             className="input-field"
-            label="phone"
+            label="Telefon *"
             {...register('phone', {
               minLength: {
                 value: 3,
@@ -96,7 +92,7 @@ const Form = () => {
 
           <TextField
             className="input-field"
-            label="email"
+            label="E-mail *"
             {...register('email', {
               minLength: {
                 value: 3,
@@ -121,7 +117,7 @@ const Form = () => {
             Submit
           </Button>
 
-          <Typography className="normal-text">Data: {JSON.stringify(data)}</Typography>
+          {showData && <Typography className="normal-text">Form data: {formData}</Typography>}
         </Box>
       </form>
     </StyledForm>
