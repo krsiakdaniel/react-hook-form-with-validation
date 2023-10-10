@@ -3,14 +3,14 @@
 Form is using:
 
 - [x] [Create React App](https://create-react-app.dev/)
-- [ ] [React Hook Form](https://react-hook-form.com/)
+- [x] [React Hook Form](https://react-hook-form.com/)
 - [ ] form **validation**
-- [ ]  **handling errors**
+- [ ] **handling errors**
 - [ ] functional **form submission**
 - [ ] **displaying data on the page**
-- [ ] using **TypeScript**
-- [ ] for components [Material UI](https://mui.com/material-ui/react-text-field/#form-props)
-- [ ] runs on [Vite](https://vitejs.dev/)
+- [x] using **TypeScript**
+- [x] for components [Material UI](https://mui.com/material-ui/react-text-field/#form-props)
+- [x] runs on [Vite](https://vitejs.dev/)
 
 ## TODO
 

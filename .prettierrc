@@ -1,0 +1,38 @@
+{
+  "overrides": [
+    {
+      "files": "*.yml",
+      "options": {
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "useTabs": false
+      }
+    },
+    {
+      "files": ".eslintrc",
+      "options": {
+        "useTabs": false
+      }
+    },
+    {
+      "files": ".prettierrc",
+      "options": {
+        "useTabs": false
+      }
+    },
+    {
+      "files": ".stylelintrc",
+      "options": {
+        "useTabs": false
+      }
+    }
+  ],
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all"
+}
