@@ -162,7 +162,6 @@ const Form = () => {
                   type="select"
                   labelId="type-label"
                   label="Hlavní jazyk"
-                  value="cestina"
                   sx={{ mb: '24px' }}
                 >
                   {languages.map((language) => (
