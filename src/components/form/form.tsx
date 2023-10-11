@@ -71,7 +71,7 @@ const Form = () => {
               required: 'Pole "Jméno" je povinné',
               minLength: {
                 value: 3,
-                message: 'Jméno by mělo být alespoň 3 znaky dlouhé.',
+                message: 'Jméno by mělo být minimálně 3 znaky dlouhé.',
               },
               maxLength: {
                 value: 64,
@@ -91,7 +91,7 @@ const Form = () => {
               pattern: /^[0-9]*$/,
               minLength: {
                 value: 9,
-                message: 'Telefon může být pouze číslo. Alespoň 9 znaků dlouhé.',
+                message: 'Telefon může být pouze číslo. Minimálně 9 znaků dlouhé.',
               },
               maxLength: {
                 value: 13,
@@ -111,11 +111,11 @@ const Form = () => {
               pattern: /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/,
               minLength: {
                 value: 7,
-                message: 'E-mail by měl být alespoň 7 znaků dlouhý.',
+                message: 'E-mail musí obsahovat znak @ a být minimálně 7 znaků dlouhý.',
               },
               maxLength: {
                 value: 64,
-                message: 'E-mail by měl být maximálně 64 znaků dlouhý.',
+                message: 'E-mail musí obsahovat znak @ a být maximálně 64 znaků dlouhý.',
               },
             })}
           />
