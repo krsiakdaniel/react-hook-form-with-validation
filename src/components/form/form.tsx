@@ -138,7 +138,10 @@ const Form = () => {
             helperText={errors.email && `${errors.email.message}`}
             {...register('email', {
               required: 'Pole "E-mail" je povinné',
-              pattern: /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/,
+              pattern: {
+                value: /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/,
+                message: 'E-mail musí obsahovat znak @ a domenu .cz, .com, .sk, ...',
+              },
               minLength: {
                 value: 7,
                 message: 'E-mail musí obsahovat znak @ a být minimálně 7 znaků dlouhý.',
