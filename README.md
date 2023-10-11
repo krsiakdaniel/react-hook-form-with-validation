@@ -10,13 +10,9 @@ Form is using:
 - [x] display **data on the page**
 - [x] using **TypeScript**
 - [x] for components [Material UI](https://mui.com/material-ui/react-text-field/#form-props)
+- [x] style componentes using MUI [styled()](https://mui.com/system/styled/)
 - [x] runs on [Vite](https://vitejs.dev/)
-
-## TODO
-
-- [ ] splnit zadani ukolu podle PDF
-- [ ] upravit CSS pomoci **MUI styled()** barvy a spacing podle PDF
-- [ ] overit vse, ze je spravne
+- [ ] deploy app on VITE
 
 ### Run server on localhost
 

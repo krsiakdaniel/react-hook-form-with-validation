@@ -4,8 +4,7 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { Box, Button, FormControl, InputLabel, MenuItem, Typography } from '@mui/material'
 import Select from '@mui/material/Select'
 import TextField from '@mui/material/TextField/TextField'
-
-import { StyledForm } from './form-styles'
+import { styled } from '@mui/system'
 
 type LanguageItem = {
   value: string
@@ -24,6 +23,41 @@ const languages = [
   { value: 'anglictina', label: 'Angličtina' },
   { value: 'slovenstina', label: 'Slovenština' },
 ]
+
+const StyledWrapper = styled(Box)({
+  backgroundColor: '#ffffff',
+  width: '75%',
+  borderRadius: '8px',
+  padding: '48px',
+})
+
+const StyledFormContainer = styled(Box)({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  wordWrap: 'break-word',
+})
+
+const StyledTextField = styled(TextField)({
+  width: '100%',
+  marginBottom: '24px',
+})
+
+const StyledButton = styled(Button)({
+  textTransform: 'capitalize',
+  alignSelf: 'flex-end',
+  color: '#ffffff',
+  backgroundColor: '#cb605e',
+
+  '&:hover': {
+    backgroundColor: '#cb605e',
+  },
+})
+
+const StyledText = styled(Typography)({
+  marginTop: '48px',
+  maxWidth: '100%',
+})
 
 const Form = () => {
   const {
@@ -47,8 +81,6 @@ const Form = () => {
     language: [{ value: '', label: '' }],
   })
 
-  const selectDefaultOption = languages[0]
-
   const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
     setData(data)
   }
@@ -58,12 +90,11 @@ const Form = () => {
   const formData = JSON.stringify(data)
 
   return (
-    <StyledForm>
+    <StyledWrapper>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Box className="form-container">
-          <TextField
+        <StyledFormContainer>
+          <StyledTextField
             placeholder="Např.: Jan Novák"
-            className="input-field"
             label={`Jméno ${errors.name ? '*' : ''}`}
             error={!!errors.name}
             helperText={errors.name && `${errors.name.message}`}
@@ -80,9 +111,8 @@ const Form = () => {
             })}
           />
 
-          <TextField
+          <StyledTextField
             placeholder="Např.: 608 123 456"
-            className="input-field"
             label={`Telefon ${errors.name ? '*' : ''}`}
             error={!!errors.phone}
             helperText={errors.phone && `${errors.phone.message}`}
@@ -100,9 +130,8 @@ const Form = () => {
             })}
           />
 
-          <TextField
+          <StyledTextField
             placeholder="Např.: jan.novak@gmail.com"
-            className="input-field"
             label={`E-mail ${errors.name ? '*' : ''}`}
             error={!!errors.email}
             helperText={errors.email && `${errors.email.message}`}
@@ -133,7 +162,7 @@ const Form = () => {
                   labelId="type-label"
                   label="Hlavní jazyk"
                   value="cestina"
-                  className="select-field"
+                  sx={{ mb: '24px' }}
                 >
                   {languages.map((language) => (
                     <MenuItem key={language.value} value={language.value}>
@@ -145,14 +174,14 @@ const Form = () => {
             />
           </FormControl>
 
-          <Button type="submit" className="submit" variant="contained" size="large" disabled={hasErrors}>
+          <StyledButton type="submit" variant="contained" size="large" disabled={hasErrors}>
             Submit
-          </Button>
+          </StyledButton>
 
-          {showData && <Typography className="normal-text">Form data: {formData}</Typography>}
-        </Box>
+          {showData && <StyledText>Form data: {formData}</StyledText>}
+        </StyledFormContainer>
       </form>
-    </StyledForm>
+    </StyledWrapper>
   )
 }
 
