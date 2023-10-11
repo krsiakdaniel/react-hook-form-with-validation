@@ -62,6 +62,7 @@ const Form = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Box className="form-container">
           <TextField
+            placeholder="Např.: Jan Novák"
             className="input-field"
             label={`Jméno ${errors.name ? '*' : ''}`}
             error={!!errors.name}
@@ -80,30 +81,34 @@ const Form = () => {
           />
 
           <TextField
+            placeholder="Např.: 777 123 456"
             className="input-field"
             label={`Telefon ${errors.name ? '*' : ''}`}
             error={!!errors.phone}
             helperText={errors.phone && `${errors.phone.message}`}
             {...register('phone', {
               required: 'Pole "Telefon" je povinné',
+              pattern: /^[0-9]*$/,
               minLength: {
                 value: 9,
-                message: 'Telefon by měl být alespoň 9 znaků dlouhý.',
+                message: 'Telefon může být pouze číslo. Alespoň 9 znaků dlouhé.',
               },
               maxLength: {
                 value: 13,
-                message: 'Telefon by měl být maximálně 13 znaků dlouhý.',
+                message: 'Telefon může být pouze číslo. Maximálně 13 znaků dlouhé.',
               },
             })}
           />
 
           <TextField
+            placeholder="Např.: jan.novak@email.cz"
             className="input-field"
             label={`E-mail ${errors.name ? '*' : ''}`}
             error={!!errors.email}
             helperText={errors.email && `${errors.email.message}`}
             {...register('email', {
               required: 'Pole "E-mail" je povinné',
+              pattern: /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/,
               minLength: {
                 value: 7,
                 message: 'E-mail by měl být alespoň 7 znaků dlouhý.',
