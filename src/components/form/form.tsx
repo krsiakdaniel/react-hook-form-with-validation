@@ -27,6 +27,7 @@ const languages = [
 const StyledWrapper = styled(Box)({
   backgroundColor: '#ffffff',
   width: '75%',
+  maxWidth: '1024px',
   borderRadius: '8px',
   padding: '48px',
 })

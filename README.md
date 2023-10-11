@@ -1,25 +1,29 @@
 # React Hook Form with validation
 
-Form is using:
+## ⚡ Demo on Vercel
+
+- [x] <https://react-hook-form-with-validation.vercel.app/>
+
+## 🛠️ Form implementation and tech Stack
 
 - [x] [Create React App](https://create-react-app.dev/)
 - [x] [React Hook Form](https://react-hook-form.com/)
-- [x] form **validation** = phone + email **regex**
+- [x] form **validation** with **regex** = phone + email
 - [x] **handling errors**
 - [x] functional **form submission**
 - [x] display **data on the page**
-- [x] using **TypeScript**
-- [x] for components [Material UI](https://mui.com/material-ui/react-text-field/#form-props)
-- [x] style componentes using MUI [styled()](https://mui.com/system/styled/)
-- [x] runs on [Vite](https://vitejs.dev/)
-- [ ] deploy app on VITE
+- [x] **TypeScript**
+- [x] components from [Material UI](https://mui.com/material-ui/react-text-field/#form-props)
+- [x] style components using MUI [styled()](https://mui.com/system/styled/)
+- [x] built on [Vite](https://vitejs.dev/)
+- [x] deployed on [Vercel](https://vercel.com/)
 
-### Run server on localhost
+## 💻 Run server on localhost
 
-First run script:
+Run script:
 
 ```bash
 npm run dev
 ```
 
-Second open localhost at: <http://localhost:5173>
+And open localhost at: <http://localhost:5173>
