@@ -27,8 +27,4 @@ export const StyledForm = styled(Box)`
   .normal-text {
     margin-top: 40px;
   }
-
-  .error-msg {
-    color: #f00;
-  }
 `

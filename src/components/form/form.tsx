@@ -60,51 +60,57 @@ const Form = () => {
         <Box className="form-container">
           <TextField
             className="input-field"
-            label="Jméno *"
+            label={`Jméno ${errors.name ? '*' : ''}`}
+            error={!!errors.name}
+            helperText={errors.name && `${errors.name.message}`}
             {...register('name', {
+              required: 'Pole "Jméno" je povinné',
               minLength: {
                 value: 3,
                 message: 'Name should be at least 3 characters',
               },
               maxLength: {
-                value: 10,
-                message: 'Name should be at most 10 characters',
+                value: 64,
+                message: 'Name should be at most 64 characters',
               },
             })}
           />
-          {errors.name && <p className="error-msg">{errors.name.message}</p>}
 
           <TextField
             className="input-field"
-            label="Telefon *"
+            label={`Telefon ${errors.name ? '*' : ''}`}
+            error={!!errors.phone}
+            helperText={errors.phone && `${errors.phone.message}`}
             {...register('phone', {
+              required: 'Pole "Telefon" je povinné',
               minLength: {
                 value: 3,
-                message: 'phone should be at least 3 characters',
+                message: 'Phone should be at least 3 characters',
               },
               maxLength: {
-                value: 10,
-                message: 'phone should be at most 10 characters',
+                value: 13,
+                message: 'Phone should be at most 13 characters',
               },
             })}
           />
-          {errors.phone && <p className="error-msg">{errors.phone.message}</p>}
 
           <TextField
             className="input-field"
-            label="E-mail *"
+            label={`E-mail ${errors.name ? '*' : ''}`}
+            error={!!errors.email}
+            helperText={errors.email && `${errors.email.message}`}
             {...register('email', {
+              required: 'Pole "E-mail" je povinné',
               minLength: {
                 value: 3,
-                message: 'email should be at least 3 characters',
+                message: 'E-mail should be at least 3 characters',
               },
               maxLength: {
-                value: 10,
-                message: 'email should be at most 10 characters',
+                value: 64,
+                message: 'E-mail should be at most 64 characters',
               },
             })}
           />
-          {errors.email && <p className="error-msg">{errors.email.message}</p>}
 
           <Controller
             name="language"
