@@ -119,7 +119,10 @@ const Form = () => {
             helperText={errors.phone && `${errors.phone.message}`}
             {...register('phone', {
               required: 'Pole "Telefon" je povinné',
-              pattern: /^[0-9]*$/,
+              pattern: {
+                value: /^[0-9]*$/,
+                message: 'Telefon může být pouze číslo.',
+              },
               minLength: {
                 value: 9,
                 message: 'Telefon může být pouze číslo. Minimálně 9 znaků dlouhé.',
