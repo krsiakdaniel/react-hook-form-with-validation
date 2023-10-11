@@ -81,7 +81,7 @@ const Form = () => {
           />
 
           <TextField
-            placeholder="Např.: 777 123 456"
+            placeholder="Např.: 608 123 456"
             className="input-field"
             label={`Telefon ${errors.name ? '*' : ''}`}
             error={!!errors.phone}
@@ -101,7 +101,7 @@ const Form = () => {
           />
 
           <TextField
-            placeholder="Např.: jan.novak@email.cz"
+            placeholder="Např.: jan.novak@gmail.com"
             className="input-field"
             label={`E-mail ${errors.name ? '*' : ''}`}
             error={!!errors.email}

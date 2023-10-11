@@ -4,7 +4,7 @@ Form is using:
 
 - [x] [Create React App](https://create-react-app.dev/)
 - [x] [React Hook Form](https://react-hook-form.com/)
-- [ ] form **validation** = phone + email **regex**
+- [x] form **validation** = phone + email **regex**
 - [x] **handling errors**
 - [x] functional **form submission**
 - [x] display **data on the page**
