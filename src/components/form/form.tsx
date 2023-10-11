@@ -46,6 +46,8 @@ const Form = () => {
     language: [{ value: '', label: '' }],
   })
 
+  const selectDefaultOption = languages[0]
+
   const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
     setData(data)
   }
@@ -67,11 +69,11 @@ const Form = () => {
               required: 'Pole "Jméno" je povinné',
               minLength: {
                 value: 3,
-                message: 'Name should be at least 3 characters',
+                message: 'Jméno by mělo být alespoň 3 znaky dlouhé.',
               },
               maxLength: {
                 value: 64,
-                message: 'Name should be at most 64 characters',
+                message: 'Jméno by mělo být maximálně 64 znaků dlouhé.',
               },
             })}
           />
@@ -84,12 +86,12 @@ const Form = () => {
             {...register('phone', {
               required: 'Pole "Telefon" je povinné',
               minLength: {
-                value: 3,
-                message: 'Phone should be at least 3 characters',
+                value: 9,
+                message: 'Telefon by měl být alespoň 9 znaků dlouhý.',
               },
               maxLength: {
                 value: 13,
-                message: 'Phone should be at most 13 characters',
+                message: 'Telefon by měl být maximálně 13 znaků dlouhý.',
               },
             })}
           />
@@ -102,12 +104,12 @@ const Form = () => {
             {...register('email', {
               required: 'Pole "E-mail" je povinné',
               minLength: {
-                value: 3,
-                message: 'E-mail should be at least 3 characters',
+                value: 7,
+                message: 'E-mail by měl být alespoň 7 znaků dlouhý.',
               },
               maxLength: {
                 value: 64,
-                message: 'E-mail should be at most 64 characters',
+                message: 'E-mail by měl být maximálně 64 znaků dlouhý.',
               },
             })}
           />
@@ -116,7 +118,9 @@ const Form = () => {
             name="language"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => <Select className="input-field" {...field} options={languages} />}
+            render={({ field }) => (
+              <Select {...field} className="input-field" options={languages} defaultValue={selectDefaultOption} />
+            )}
           />
 
           <Button type="submit" className="submit" variant="contained" size="large" disabled={hasErrors}>
