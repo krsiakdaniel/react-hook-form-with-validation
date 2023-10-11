@@ -2,10 +2,9 @@ import { Box } from '@mui/material'
 import styled from 'styled-components'
 
 export const StyledForm = styled(Box)`
-  max-height: 100vh;
+  background-color: #ffffff;
   width: 75%;
   border-radius: 8px;
-  background-color: #ffffff;
   padding: 40px;
 
   .form-container {

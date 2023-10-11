@@ -4,10 +4,10 @@ Form is using:
 
 - [x] [Create React App](https://create-react-app.dev/)
 - [x] [React Hook Form](https://react-hook-form.com/)
-- [ ] form **validation**
-- [ ] **handling errors**
-- [ ] functional **form submission**
-- [ ] **displaying data on the page**
+- [ ] form **validation** = phone + email **regex**
+- [x] **handling errors**
+- [x] functional **form submission**
+- [x] display **data on the page**
 - [x] using **TypeScript**
 - [x] for components [Material UI](https://mui.com/material-ui/react-text-field/#form-props)
 - [x] runs on [Vite](https://vitejs.dev/)
