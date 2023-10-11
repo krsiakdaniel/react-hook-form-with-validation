@@ -5,7 +5,7 @@ export const StyledForm = styled(Box)`
   background-color: #ffffff;
   width: 75%;
   border-radius: 8px;
-  padding: 40px;
+  padding: 48px;
 
   .form-container {
     display: flex;
@@ -16,15 +16,30 @@ export const StyledForm = styled(Box)`
 
   .input-field {
     width: 100%;
-    margin: 8px 0;
+    margin-bottom: 24px;
+  }
+
+  .input-field input {
+    color: #4b5a68;
+  }
+
+  .select-field {
+    margin-bottom: 24px;
   }
 
   .submit {
-    margin-top: 40px;
+    text-transform: Capitalize;
+    align-self: flex-end;
+    color: #ffffff;
+    background-color: #cb605e;
+
+    &:hover {
+      background-color: #cb605e;
+    }
   }
 
   .normal-text {
-    margin-top: 40px;
+    margin-top: 48px;
     max-width: 100%;
   }
 `

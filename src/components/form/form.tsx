@@ -128,6 +128,7 @@ const Form = () => {
                   labelId="type-label"
                   label="Hlavní jazyk"
                   value="cestina"
+                  className="select-field"
                 >
                   {languages.map((language) => (
                     <MenuItem key={language.value} value={language.value}>
