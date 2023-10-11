@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
-import Select from 'react-select'
 
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, FormControl, InputLabel, MenuItem, Typography } from '@mui/material'
+import Select from '@mui/material/Select'
 import TextField from '@mui/material/TextField/TextField'
 
 import { StyledForm } from './form-styles'
@@ -115,14 +115,29 @@ const Form = () => {
             })}
           />
 
-          <Controller
-            name="language"
-            control={control}
-            rules={{ required: true }}
-            render={({ field }) => (
-              <Select {...field} className="input-field" options={languages} defaultValue={selectDefaultOption} />
-            )}
-          />
+          <FormControl sx={{ marginTop: 1, marginBottom: 1, width: '100%' }}>
+            <InputLabel id="type-label">Hlavní jazyk</InputLabel>
+            <Controller
+              control={control}
+              name="language"
+              render={({ field }) => (
+                <Select
+                  margin="dense"
+                  {...field}
+                  type="select"
+                  labelId="type-label"
+                  label="Hlavní jazyk"
+                  value="cestina"
+                >
+                  {languages.map((language) => (
+                    <MenuItem key={language.value} value={language.value}>
+                      {language.label}
+                    </MenuItem>
+                  ))}
+                </Select>
+              )}
+            />
+          </FormControl>
 
           <Button type="submit" className="submit" variant="contained" size="large" disabled={hasErrors}>
             Submit
