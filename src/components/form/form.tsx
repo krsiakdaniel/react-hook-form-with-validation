@@ -36,6 +36,7 @@ const Form = () => {
       name: '',
       phone: '',
       email: '',
+      language: [{ value: languages[0].value, label: languages[0].label }],
     },
   })
 
