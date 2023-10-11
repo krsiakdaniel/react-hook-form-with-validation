@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const StyledForm = styled(Box)`
   max-height: 100vh;
-  width: 50%;
+  width: 75%;
   border-radius: 8px;
   background-color: #ffffff;
   padding: 40px;
@@ -26,5 +26,6 @@ export const StyledForm = styled(Box)`
 
   .normal-text {
     margin-top: 40px;
+    max-width: 100%;
   }
 `

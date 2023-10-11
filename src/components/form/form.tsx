@@ -20,9 +20,9 @@ type FormValues = {
 }
 
 const languages = [
-  { value: 'Čeština', label: 'Čeština' },
-  { value: 'Angličtina', label: 'Angličtina' },
-  { value: 'Slovenština', label: 'Slovenština' },
+  { value: 'cestina', label: 'Čeština' },
+  { value: 'anglictina', label: 'Angličtina' },
+  { value: 'slovenstina', label: 'Slovenština' },
 ]
 
 const Form = () => {
