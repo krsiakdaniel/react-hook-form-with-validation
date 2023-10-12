@@ -6,7 +6,7 @@
 
 ## 🛠️ Form implementation and tech Stack
 
-![x](react.png) ![x](react-hook-form.png) ![x](typescript.png) ![x](mui.png) ![x](vite.png)
+![react](react.png) ![react-hook-form](react-hook-form.png) ![typescript](typescript.png) ![mui](mui.png) ![vite](vite.png)
 
 - [x] [Create React App](https://create-react-app.dev/)
 - [x] [React Hook Form](https://react-hook-form.com/)
